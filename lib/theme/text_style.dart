@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'dimens.dart';
+
 
 // ignore: must_be_immutable
 class Headline3txt extends StatelessWidget {
@@ -60,7 +60,7 @@ class Headline5txt extends StatelessWidget {
       text,
       style: GoogleFonts.josefinSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 12.4,
+              fontSize: fullWidth(context) / 11.95,
               fontWeight: FontWeight.w500,
               color: color)),
     );
@@ -103,7 +103,7 @@ class Subtitle1txt extends StatelessWidget {
       style: GoogleFonts.josefinSans(
           textStyle: TextStyle(
               fontSize: fullWidth(context) / 17.2,
-              fontWeight: FontWeight.bold,
+              fontWeight: FontWeight.w900,
               color: color)),
     );
   }
@@ -123,7 +123,7 @@ class Subtitle2txt extends StatelessWidget {
       text,
       style: GoogleFonts.josefinSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 19.3,
+              fontSize: fullWidth(context) / 17.2,
               fontWeight: FontWeight.w400,
               color: color)),
     );
@@ -144,8 +144,8 @@ class Body1txt extends StatelessWidget {
       text,
       style: GoogleFonts.josefinSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 21.1,
-              fontWeight: FontWeight.bold,
+              fontSize: fullWidth(context) / 20.1,
+              fontWeight: FontWeight.w500,
               color: color)),
     );
   }
@@ -165,7 +165,7 @@ class Body2txt extends StatelessWidget {
       text,
       style: GoogleFonts.josefinSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 28,
+              fontSize: fullWidth(context) / 24.3,
               fontWeight: FontWeight.normal,
               color: color)),
     );
