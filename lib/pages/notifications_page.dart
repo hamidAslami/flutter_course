@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/fakeData.dart';
-import 'package:flutter_course_shop_ui/theme/dimens.dart';
+
 import 'package:flutter_course_shop_ui/widgets/notifications_box.dart';
 
 class NotificationsPage extends StatefulWidget {

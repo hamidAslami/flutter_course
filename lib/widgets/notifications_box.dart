@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/models/notifications_model.dart';
-import 'package:flutter_course_shop_ui/theme/dimens.dart';
+
 
 
 Widget notificationsBoxWidget(NotificationModel notifications,BuildContext context) {
