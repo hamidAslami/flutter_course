@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/models/notifications_model.dart';
+import 'package:flutter_course_shop_ui/theme/dimens.dart';
+import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
 
 
@@ -11,10 +13,10 @@ mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
       children: [
         Container(
-          margin: EdgeInsets.symmetric(vertical: 12,horizontal: 8),
+          margin: EdgeInsets.symmetric(vertical: 9,horizontal: 8),
 
-          width: 60,
-          height: 60,
+          width: fullWidth(context)/6,
+          height: fullWidth(context)/6,
           decoration: BoxDecoration(
             color: Colors.white,
               shape: BoxShape.circle,
@@ -24,7 +26,7 @@ mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   notifications.image,
                 ),
               )),
-        ),
+        ),//image
         Expanded(
           flex: 3,
           child: Container(
@@ -34,24 +36,16 @@ mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: 8),
-                  child: Text(
+                  margin: EdgeInsets.only(bottom: smallSize(context),),
+                  child: Body1txt(
                     notifications.title,
-                    overflow: TextOverflow.ellipsis,
-                    maxLines: 2,
-                    style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      color: Colors.black,
-                      fontSize: 16,
-                    ),
+
+
                   ),
                 ),
-                Text(
+                Captiontxt(
                   notifications.subtitle,
-                  style: TextStyle(
-                      fontSize: 13,
-                      color: Colors.black54,
-                      fontWeight: FontWeight.w400),
+
                 ),
               ],
             ),
@@ -61,10 +55,9 @@ mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         Expanded(
           flex: 1,
           child: Container(
-            child: Text(
+            child: Captiontxt(
               notifications.time,
-              style: TextStyle(
-                  fontWeight: FontWeight.w400, fontSize: 12, color: Colors.black54),
+
             ),
           ),
         )

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/fakeData.dart';
+import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
 import 'package:flutter_course_shop_ui/widgets/notifications_box.dart';
 
@@ -19,12 +20,7 @@ class NotificationsPageState extends State<NotificationsPage> {
         backgroundColor: Colors.white,
         centerTitle: true,
         elevation: 0,
-        title: Text(
-          "Notifications",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              fontSize: 22, color: Colors.black, fontWeight: FontWeight.w400),
-        ),
+        title: Subtitle2txt("Notifications"),
       ),
       body: SingleChildScrollView(
         physics: BouncingScrollPhysics(),

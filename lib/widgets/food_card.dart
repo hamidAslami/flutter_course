@@ -5,12 +5,12 @@ import 'package:flutter_course_shop_ui/models/food_model.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
-Widget foodCardWidget(Food foodWidget, BuildContext context) {
+Widget foodCardWidget(Food food, BuildContext context) {
   return Container(
     margin: EdgeInsets.symmetric(
-        horizontal: largeSize(context), vertical: mediumSize(context)),
+         vertical: mediumSize(context)),
     width: double.infinity,
-    height: fullHeight(context) / 2.5,
+    height: fullHeight(context) / 2.3,
     decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(mediumSize(context)),
@@ -23,21 +23,20 @@ Widget foodCardWidget(Food foodWidget, BuildContext context) {
         ]),
     child: Column(
       children: [
-        Container(
-          width: double.infinity,
-          height: fullHeight(context) / 3.4,
+        AspectRatio(
+          aspectRatio: 16/10,
           child: Stack(
             children: [
-              Align(
-                  alignment: Alignment(0, -1),
-                  child: Container(
-                      width: double.infinity,
-                      child: Container(
-                        child: Image.network(
-                          foodWidget.imageBackground,
-                          fit: BoxFit.cover,
-                        ),
-                      ))),
+              Positioned.fill(
+                child: Container(
+                    width: double.infinity,
+                    child: Container(
+                      child: Image.network(
+                        food.imageBackground,
+                        fit: BoxFit.cover,
+                      ),
+                    )),
+              ),
               Container(
                 margin: EdgeInsets.symmetric(
                     horizontal: mediumSize(context),
@@ -85,7 +84,7 @@ Widget foodCardWidget(Food foodWidget, BuildContext context) {
                               color: Colors.yellow.shade700,
                               size: largeSize(context)),
                           Captiontxt(
-                            foodWidget.rating.toString(),
+                            food.rating.toString(),
                             color: Colors.green,
                           ),
                         ],
@@ -104,11 +103,11 @@ Widget foodCardWidget(Food foodWidget, BuildContext context) {
             children: [
               Row(
                 children: [
-                  Subtitle1txt(foodWidget.title),
+                  Subtitle1txt(food.title),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: xxSmallSize(context)),
+                    margin: EdgeInsets.symmetric(horizontal: smallSize(context)),
                     padding: EdgeInsets.symmetric(
-                        horizontal: xSmallSize(context), vertical: 3),
+                        horizontal: smallSize(context), vertical: 3),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(xlargeSize(context)),
                         gradient: LinearGradient(
@@ -120,13 +119,13 @@ Widget foodCardWidget(Food foodWidget, BuildContext context) {
                           end: Alignment.topRight,
                         )),
                     child: Captiontxt(
-                      foodWidget.nationalityFood,
+                      food.nationalityFood,
                       color: Colors.white,
                     ),
                   ), // Nationality Food
                   Container(
                     padding: EdgeInsets.symmetric(
-                        horizontal: xSmallSize(context), vertical: 3),
+                        horizontal: smallSize(context), vertical: 3),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(xlargeSize(context)),
                         gradient: LinearGradient(
@@ -138,24 +137,24 @@ Widget foodCardWidget(Food foodWidget, BuildContext context) {
                           end: Alignment.topRight,
                         )),
                     child: Captiontxt(
-                      foodWidget.distance.toString(),
+                      food.distance.toString(),
                       color: Colors.white,
                     ),
                   ), // Distance
-                  Stack(
-                    children: [
-                      Container(
-                        width: smallSize(context),
-                        height: smallSize(context),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Colors.white,width: 2
-                          ),
-                          image: DecorationImage(image: AssetImage(''))
-                        ),
-                      )
-                    ],
-                  ),
+                  // Stack(
+                  //   children: [
+                  //     Container(
+                  //       width: smallSize(context),
+                  //       height: smallSize(context),
+                  //       decoration: BoxDecoration(
+                  //         shape: BoxShape.circle,
+                  //         border: Border.all(color: Colors.white,width: 2
+                  //         ),
+                  //         image: DecorationImage(image: AssetImage(''))
+                  //       ),
+                  //     )
+                  //   ],
+                  // ),
                   Expanded(
                     child: SizedBox(),
                   ),
@@ -163,9 +162,11 @@ Widget foodCardWidget(Food foodWidget, BuildContext context) {
                 ],
               ),
               Container(
+                margin: EdgeInsets.only(top: smallSize(context)
+                ),
                 alignment: AlignmentDirectional.centerStart,
                 child: Body2txt(
-                  foodWidget.address,
+                  food.address,
                   color: Colors.grey,
                 ),
               )

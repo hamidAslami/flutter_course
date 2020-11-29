@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/pages/my_profile_page.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:line_icons/line_icons.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -48,17 +49,17 @@ class MainPageState extends State<MainPage> {
         showUnselectedLabels: false,
         showSelectedLabels: false,
         items: [
-          BottomNavigationBarItem(title: Text('Home'), icon: Container(width: 36,child: SvgPicture.asset('assets/home page unselected.svg'))),
+          BottomNavigationBarItem(title: Text('Home'), icon: Icon(LineIcons.home)),
           BottomNavigationBarItem(
-              title: Text('My Favorite'), icon: Container(width: 24,child: SvgPicture.asset('assets/favorite page unselected.svg'))),
+              title: Text('My Favorite'), icon: (Icon(LineIcons.bookmark))),
           BottomNavigationBarItem(
-              title: Text('Add'), icon: Container(width: xxlargeSize(context),child: SvgPicture.asset('assets/add icon.svg'))),
+              title: Text('Add'), icon: Icon(LineIcons.plus_circle)),
           BottomNavigationBarItem(
               title: Text('Notification'),
-              icon: Container(width: 28,child: SvgPicture.asset('assets/notification page unselected.svg'))
-          ),
+              icon: Icon(Icons.notifications_none)),
+
           BottomNavigationBarItem(
-              title: Text('My Profile'), icon: Container(width: 22,child: SvgPicture.asset('assets/profile page unselected.svg')))
+              title: Text('My Profile'), icon: Icon((LineIcons.user))),
         ],
       ),
       body: bodyWidget(),

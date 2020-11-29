@@ -143,6 +143,7 @@ class MyProfilePageState extends State<MyProfilePage> {
                 ),
               ),
               ListView.builder(
+                padding: EdgeInsets.symmetric(horizontal: mediumSize(context),vertical: 0),
                 physics: NeverScrollableScrollPhysics(),
                 addAutomaticKeepAlives: true,
                 scrollDirection: Axis.vertical,

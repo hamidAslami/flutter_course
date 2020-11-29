@@ -120,11 +120,15 @@ class Subtitle2txt extends StatelessWidget {
   // ignore: missing_return
   Widget build(BuildContext context) {
     return Text(
+
       text,
+      overflow: TextOverflow.ellipsis,
+      maxLines: 2,
       style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 19.2,
-              fontWeight: FontWeight.w400,
+
+              fontSize: fullWidth(context) / 17.2,
+              fontWeight: FontWeight.w500,
               color: color)),
     );
   }
@@ -142,7 +146,10 @@ class Body1txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
       style: GoogleFonts.openSans(
+
           textStyle: TextStyle(
               fontSize: fullWidth(context) / 22.1,
               fontWeight: FontWeight.w500,
