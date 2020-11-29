@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_course_shop_ui/pages/test_page.dart';
+import 'package:flutter_course_shop_ui/pages/category_list_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: TestPage(),
+      home: CategoryListPage(),
     );
   }
 }

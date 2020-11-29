@@ -23,7 +23,10 @@ Widget categoryCard() {
             alignment: Alignment.center,
             child: Text(
               "Chinese",
-              style: TextStyle(color: Colors.white, fontSize: 30,fontWeight: FontWeight.w700),
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 30,
+                  fontWeight: FontWeight.w700),
             ),
           )
         ],
