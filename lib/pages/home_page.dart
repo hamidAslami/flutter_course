@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_course_shop_ui/pages/see_all_food_page.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 import 'package:flutter_course_shop_ui/widgets/cateogry_card.dart';
@@ -40,9 +41,17 @@ class HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Subtitle2txt("Trending Restaurants"),
-                    Body2txt(
-                      "See all (45)",
-                      color: Color(0xffb8c0d5),
+                    GestureDetector(
+                      onTap: (){
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => SeeAllFoodPage()));
+                      },
+                      child: Body2txt(
+                        "See all (45)",
+                        color: Color(0xffb8c0d5),
+                      ),
                     )
                   ],
                 ),
@@ -55,7 +64,6 @@ class HomePageState extends State<HomePage> {
                       EdgeInsets.symmetric(horizontal: mediumSize(context)),
                   shrinkWrap: true,
                   physics: BouncingScrollPhysics(),
-
                   scrollDirection: Axis.horizontal,
                   itemCount: foodList().length,
                   itemBuilder: (context, index) =>

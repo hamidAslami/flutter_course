@@ -18,8 +18,8 @@ class MainPageState extends State<MainPage> {
   // ignore: missing_return
   Widget bodyWidget() {
     switch (index) {
-      // case 0:
-      //   return HomePage();
+      case 0:
+        return HomePage();
       // case 1:
       //   return YourPage();
       // case 2:
@@ -29,7 +29,7 @@ class MainPageState extends State<MainPage> {
       // case 4:
       //   return ();
       default:
-        return SeeAllFoodPage();
+        return HomePage();
     }
   }
 
