@@ -21,7 +21,7 @@ class SeeAllFoodPageState extends State<SeeAllFoodPage> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         elevation: 0,
-        brightness: Brightness.dark,
+        brightness: Brightness.light,
         backgroundColor: Colors.white,
         title: Subtitle2txt("Trending Restaurants"),
         centerTitle: true,
