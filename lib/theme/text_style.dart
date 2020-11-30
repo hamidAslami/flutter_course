@@ -16,9 +16,9 @@ class Headline3txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 6,
+              fontSize: fullWidth(context) / 8,
               fontWeight: FontWeight.bold,
               color: color)),
     );
@@ -37,7 +37,7 @@ class Headline3txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
               fontSize: fullWidth(context) / 8,
               fontWeight: FontWeight.w400,
@@ -58,9 +58,9 @@ class Headline5txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 11.95,
+              fontSize: fullWidth(context) / 13.95,
               fontWeight: FontWeight.w500,
               color: color)),
     );
@@ -79,9 +79,9 @@ class Headline6txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 14.9,
+              fontSize: fullWidth(context) / 16.9,
               fontWeight: FontWeight.bold,
               color: color)),
     );
@@ -100,9 +100,9 @@ class Subtitle1txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 17.2,
+              fontSize: fullWidth(context) / 19.2,
               fontWeight: FontWeight.w900,
               color: color)),
     );
@@ -120,11 +120,15 @@ class Subtitle2txt extends StatelessWidget {
   // ignore: missing_return
   Widget build(BuildContext context) {
     return Text(
+
       text,
-      style: GoogleFonts.josefinSans(
+      overflow: TextOverflow.ellipsis,
+      maxLines: 2,
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
+
               fontSize: fullWidth(context) / 17.2,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
               color: color)),
     );
   }
@@ -142,9 +146,12 @@ class Body1txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+        overflow: TextOverflow.ellipsis,
+        maxLines: 2,
+      style: GoogleFonts.openSans(
+
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 20.1,
+              fontSize: fullWidth(context) / 22.1,
               fontWeight: FontWeight.w500,
               color: color)),
     );
@@ -163,9 +170,9 @@ class Body2txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 24.3,
+              fontSize: fullWidth(context) / 26.3,
               fontWeight: FontWeight.normal,
               color: color)),
     );
@@ -184,9 +191,9 @@ class Body2txt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 28.1,
+              fontSize: fullWidth(context) / 30.1,
               fontWeight: FontWeight.w500,
               color: color)),
     );
@@ -205,9 +212,9 @@ class Captiontxt extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: GoogleFonts.josefinSans(
+      style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 30,
+              fontSize: fullWidth(context) / 32,
               fontWeight: FontWeight.w400,
               color: color)),
     );
