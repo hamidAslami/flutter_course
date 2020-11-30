@@ -35,6 +35,7 @@ class HomePageState extends State<HomePage> {
             ),
             Container(
               width: fullWidth(context),
+
               height: 200,
               color: Colors.blue,
               // child: ListView.builder(
