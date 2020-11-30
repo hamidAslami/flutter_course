@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/models/catgoryModel.dart';
+import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
-Widget categoryCard(Category category) {
+Widget categoryCard(Category category , BuildContext context) {
   return Container(
+    margin: EdgeInsets.all(standardSize(context)),
       width: 120,
       height: 120,
       child: Stack(

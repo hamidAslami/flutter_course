@@ -4,6 +4,7 @@ import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 import 'package:flutter_course_shop_ui/widgets/cateogry_card.dart';
 import 'package:flutter_course_shop_ui/widgets/food_card.dart';
+import 'package:flutter_course_shop_ui/widgets/member_card.dart';
 import 'package:flutter_course_shop_ui/widgets/search_box.dart';
 
 import '../fakeData.dart';
@@ -19,10 +20,9 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
         child: Container(
-          width: fullWidth(context),
-          height: fullHeight(context),
-          margin: EdgeInsets.symmetric( vertical: xxlargeSize(context)),
+          margin: EdgeInsets.only(top: xxlargeSize(context)),
           child: Column(
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.start,
@@ -62,15 +62,36 @@ class HomePageState extends State<HomePage> {
                 ),
               ), // title 2
               Container(
-                height: fullHeight(context) / 7,
                 width: fullWidth(context),
+                height: fullHeight(context) / 5.4,
                 child: ListView.builder(
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,
-                  itemBuilder: (context, index) => categoryCard(categoryList()[index]),
+                  itemBuilder: (context, index) => categoryCard(categoryList()[index],context),
                 ),
-              ), // food card
+              ), // category card
+              Container(
+                margin: EdgeInsets.only(right: standardSize(context) , left: standardSize(context) , top: mediumSize(context)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Subtitle2txt("Friends"),
+                    Body2txt("See all (56)",color: Color(0xffb8c0d5),)
+                  ],
+                ),
+              ), // title 3
+              Container(
+                width: fullWidth(context),
+                height: fullHeight(context) / 8.6,
+                // margin: EdgeInsets.symmetric(horizontal: standardSize(context)),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 6,
+                  itemBuilder: (context, index) => memberCardWidget(memberList()[index],context),
+                ),
+              ), // friends card
             ],
           ),
         ),

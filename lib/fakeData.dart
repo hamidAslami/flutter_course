@@ -26,6 +26,11 @@ List memberList() {
 
   members.add(Member("assets/friend2.jpg", ""));
   members.add(Member("assets/friend3.jpg", ""));
+  members.add(Member("assets/friend1.jpg", ""));
+  members.add(Member("assets/friend4.jpg", ""));
+  members.add(Member("assets/friend5.jpg", ""));
+  members.add(Member("assets/friend6.jpg", ""));
+
 
   return members;
 }
@@ -35,9 +40,10 @@ List memberList() {
 List categoryList() {
   List<Category> categories = new List();
 
-  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
-  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
-  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
+  categories.add(Category("Italian" , "https://mag.safarestan.com/wp-content/uploads/2017/12/%D8%BA%D8%B0%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%AA%D8%A7%D9%84%DB%8C%D8%A7%DB%8C%DB%8C-696x522.jpg" , Colors.red , Colors.blueAccent));
+  categories.add(Category("Chinese" , "https://mstiran.com/resource/files/cache/attractions-china-chinese-dishes-top-7d1ac052003d71fbac0df3900ed61d91.jpg" , Colors.red , Colors.deepPurpleAccent));
+  categories.add(Category("Maxican" , "https://www.eligasht.com/Blog/wp-content/uploads/2018/07/beaf-taco.jpg" , Colors.blueAccent , Colors.blue));
+
 
   return categories;
 }

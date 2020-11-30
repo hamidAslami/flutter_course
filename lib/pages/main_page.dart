@@ -17,16 +17,16 @@ class MainPageState extends State<MainPage> {
   // ignore: missing_return
   Widget bodyWidget() {
     switch (index) {
-      /*case 0:
-        return YourPage();
-      case 1:
-        return YourPage();
-      case 2:
-        return YourPage();
-      case 3:
-        return YourPage();*/
-      case 4:
+      case 0:
         return HomePage();
+      // case 1:
+      //   return YourPage();
+      // case 2:
+      //   return YourPage();
+      // case 3:
+      //   return YourPage();
+      // case 4:
+      //   return ();
       default:
         return HomePage();
     }
