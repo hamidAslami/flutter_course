@@ -9,43 +9,47 @@ import 'package:line_icons/line_icons.dart';
 
 import '../fakeData.dart';
 
-class SeeAllFoodPage extends StatefulWidget{
+class SeeAllFoodPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => SeeAllFoodPageState();
-
 }
 
 class SeeAllFoodPageState extends State<SeeAllFoodPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        brightness: Brightness.light,
+        backgroundColor: Colors.white,
+        title: Subtitle2txt("Trending Restaurants"),
+        centerTitle: true,
+        leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back_ios_rounded,
+              color: Colors.black,
+            ),
+            onPressed: () {
+              Navigator.pop(context);
+            }),
+      ),
       body: SingleChildScrollView(
         child: Container(
           margin: EdgeInsets.only(top: xxlargeSize(context)),
           child: Column(
             children: [
               Container(
-                margin: EdgeInsets.only(right: standardSize(context) , left: standardSize(context) , bottom: xlargeSize(context)),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Container(child: SvgPicture.asset("assets/back ios.svg"),
-                    width: 25,
-                      height: 25,
-                    ),
-                    Expanded(child: SizedBox()),
-                    Container(child: Subtitle2txt("Trending Restaurants"),margin: EdgeInsets.only(right: fullWidth(context) / 7),),
-                  ],
-                ),
-              ),
-              Container(child: searchBoxWidget("Search"),
+                child: searchBoxWidget("Search"),
                 margin: EdgeInsets.symmetric(horizontal: standardSize(context)),
               ),
               ListView.builder(
                 shrinkWrap: true,
+                padding: EdgeInsets.symmetric(horizontal: mediumSize(context)),
                 scrollDirection: Axis.vertical,
                 itemCount: foodList().length,
-                itemBuilder: (context, index) => foodCardWidget(foodList()[index], context),
+                itemBuilder: (context, index) =>
+                    foodCardWidget(foodList()[index], context),
                 physics: NeverScrollableScrollPhysics(),
               ),
             ],

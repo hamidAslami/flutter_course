@@ -102,7 +102,7 @@ class Subtitle1txt extends StatelessWidget {
       text,
       style: GoogleFonts.openSans(
           textStyle: TextStyle(
-              fontSize: fullWidth(context) / 19.2,
+              fontSize: fullWidth(context) / 21,
               fontWeight: FontWeight.w900,
               color: color)),
     );
