@@ -7,11 +7,10 @@ import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
 Widget foodCardWidget(Food food, BuildContext context) {
   return Container(
-    margin: EdgeInsets.symmetric(
-         vertical: mediumSize(context),
-    horizontal: standardSize(context)),
-    width: fullWidth(context),
-    height: fullHeight(context) / 2.3,
+    margin: EdgeInsets.only(right: smallSize(context),top: mediumSize(context),bottom: mediumSize(
+        context)),
+    width: fullWidth(context) / 1.2,
+    height: fullHeight(context) / 2.2,
     decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(mediumSize(context)),
@@ -24,8 +23,8 @@ Widget foodCardWidget(Food food, BuildContext context) {
         ]),
     child: Column(
       children: [
-        AspectRatio(
-          aspectRatio: 16/10,
+        Expanded(
+          flex: 2,
           child: Stack(
             children: [
               Positioned.fill(
@@ -97,81 +96,86 @@ Widget foodCardWidget(Food food, BuildContext context) {
             ],
           ),
         ),
-        Container(
-          margin: EdgeInsets.symmetric(
-              vertical: smallSize(context), horizontal: smallSize(context)),
-          child: Column(
-            children: [
-              Row(
-                children: [
-                  Subtitle1txt(food.title),
-                  Container(
-                    margin: EdgeInsets.symmetric(horizontal: smallSize(context)),
-                    padding: EdgeInsets.symmetric(
-                        horizontal: smallSize(context), vertical: 3),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(xlargeSize(context)),
-                        gradient: LinearGradient(
-                          colors: [
-                            (Colors.orange.shade400),
-                            (Colors.pink.shade400),
-                          ],
-                          begin: Alignment.bottomLeft,
-                          end: Alignment.topRight,
-                        )),
-                    child: Captiontxt(
-                      food.nationalityFood,
-                      color: Colors.white,
+        Expanded(
+          flex: 1,
+          child: Container(
+            margin: EdgeInsets.symmetric(
+                vertical: smallSize(context), horizontal: smallSize(context)),
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Subtitle1txt(food.title),
+                    Container(
+                      margin:
+                          EdgeInsets.symmetric(horizontal: smallSize(context)),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: smallSize(context), vertical: 3),
+                      decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(xlargeSize(context)),
+                          gradient: LinearGradient(
+                            colors: [
+                              (Colors.orange.shade400),
+                              (Colors.pink.shade400),
+                            ],
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                          )),
+                      child: Captiontxt(
+                        food.nationalityFood,
+                        color: Colors.white,
+                      ),
+                    ), // Nationality Food
+                    Container(
+                      padding: EdgeInsets.symmetric(
+                          horizontal: smallSize(context), vertical: 3),
+                      decoration: BoxDecoration(
+                          borderRadius:
+                              BorderRadius.circular(xlargeSize(context)),
+                          gradient: LinearGradient(
+                            colors: [
+                              (Colors.orange.shade400),
+                              (Colors.pink.shade400),
+                            ],
+                            begin: Alignment.bottomLeft,
+                            end: Alignment.topRight,
+                          )),
+                      child: Captiontxt(
+                        food.distance.toString(),
+                        color: Colors.white,
+                      ),
+                    ), // Distance
+                    // Stack(
+                    //   children: [
+                    //     Container(
+                    //       width: smallSize(context),
+                    //       height: smallSize(context),
+                    //       decoration: BoxDecoration(
+                    //         shape: BoxShape.circle,
+                    //         border: Border.all(color: Colors.white,width: 2
+                    //         ),
+                    //         image: DecorationImage(image: AssetImage(''))
+                    //       ),
+                    //     )
+                    //   ],
+                    // ),
+                    Expanded(
+                      child: SizedBox(),
                     ),
-                  ), // Nationality Food
-                  Container(
-                    padding: EdgeInsets.symmetric(
-                        horizontal: smallSize(context), vertical: 3),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(xlargeSize(context)),
-                        gradient: LinearGradient(
-                          colors: [
-                            (Colors.orange.shade400),
-                            (Colors.pink.shade400),
-                          ],
-                          begin: Alignment.bottomLeft,
-                          end: Alignment.topRight,
-                        )),
-                    child: Captiontxt(
-                      food.distance.toString(),
-                      color: Colors.white,
-                    ),
-                  ), // Distance
-                  // Stack(
-                  //   children: [
-                  //     Container(
-                  //       width: smallSize(context),
-                  //       height: smallSize(context),
-                  //       decoration: BoxDecoration(
-                  //         shape: BoxShape.circle,
-                  //         border: Border.all(color: Colors.white,width: 2
-                  //         ),
-                  //         image: DecorationImage(image: AssetImage(''))
-                  //       ),
-                  //     )
-                  //   ],
-                  // ),
-                  Expanded(
-                    child: SizedBox(),
+                    Icon(Icons.more_vert)
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(top: smallSize(context)),
+                  alignment: AlignmentDirectional.centerStart,
+                  child: Body2txt(
+                    food.address,
+                    color: Colors.grey,
                   ),
-                  Icon(Icons.more_vert)
-                ],
-              ),
-              Container(
-                margin: EdgeInsets.only(top: smallSize(context)
-                ),
-                alignment: AlignmentDirectional.centerStart,
-                child: Body2txt(
-                  food.address,
-                  color: Colors.grey,
-                ),
-              )
-            ],
+                )
+              ],
+            ),
           ),
         ),
       ],

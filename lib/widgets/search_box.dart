@@ -11,11 +11,11 @@ Widget searchBoxWidget(
     decoration: InputDecoration(
       enabledBorder:  OutlineInputBorder(
         borderRadius: BorderRadius.circular(12),
-        borderSide:  BorderSide(color: Colors.grey, width: 0.5),
+        borderSide:  BorderSide(color: Colors.grey, width: 1),
       ),
         border: OutlineInputBorder(
           borderRadius:BorderRadius.circular(12),
-          borderSide: BorderSide(color: Colors.indigo,width: 0.5)
+          borderSide: BorderSide(color: Colors.indigo,width: 1)
         ),
         prefixIcon: Icon(LineIcons.search),
       hintText:  hint,

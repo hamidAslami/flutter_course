@@ -12,7 +12,6 @@ import '../fakeData.dart';
 class HomePage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => HomePageState();
-
 }
 
 class HomePageState extends State<HomePage> {
@@ -28,36 +27,54 @@ class HomePageState extends State<HomePage> {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Container(child: searchBoxWidget("Find Restaurants"),
-              margin: EdgeInsets.symmetric(horizontal: standardSize(context)),
+              Container(
+                child: searchBoxWidget("Find Restaurants"),
+                margin: EdgeInsets.symmetric(horizontal: standardSize(context)),
               ),
               Container(
-                margin: EdgeInsets.only(right: standardSize(context) , left: standardSize(context) , top: mediumSize(context)),
+                margin: EdgeInsets.only(
+                    right: standardSize(context),
+                    left: standardSize(context),
+                    top: mediumSize(context)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Subtitle2txt("Trending Restaurants"),
-                    Body2txt("See all (45)",color: Color(0xffb8c0d5),)
+                    Body2txt(
+                      "See all (45)",
+                      color: Color(0xffb8c0d5),
+                    )
                   ],
                 ),
               ), // title 1
               Container(
-                height: fullHeight(context) / 2.3,
+                height: fullHeight(context) / 2.2,
                 width: fullWidth(context),
                 child: ListView.builder(
+                  padding:
+                      EdgeInsets.symmetric(horizontal: mediumSize(context)),
                   shrinkWrap: true,
+                  physics: BouncingScrollPhysics(),
+
                   scrollDirection: Axis.horizontal,
-                  itemCount: 2,
-                  itemBuilder: (context, index) => foodCardWidget(foodList()[index], context),
+                  itemCount: foodList().length,
+                  itemBuilder: (context, index) =>
+                      foodCardWidget(foodList()[index], context),
                 ),
               ), // food card
               Container(
-                margin: EdgeInsets.only(right: standardSize(context) , left: standardSize(context) , top: mediumSize(context)),
+                margin: EdgeInsets.only(
+                    right: standardSize(context),
+                    left: standardSize(context),
+                    top: mediumSize(context)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Subtitle2txt("Category"),
-                    Body2txt("See all (9)",color: Color(0xffb8c0d5),)
+                    Body2txt(
+                      "See all (9)",
+                      color: Color(0xffb8c0d5),
+                    )
                   ],
                 ),
               ), // title 2
@@ -68,16 +85,23 @@ class HomePageState extends State<HomePage> {
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
                   itemCount: 3,
-                  itemBuilder: (context, index) => categoryCard(categoryList()[index],context),
+                  itemBuilder: (context, index) =>
+                      categoryCard(categoryList()[index], context),
                 ),
               ), // category card
               Container(
-                margin: EdgeInsets.only(right: standardSize(context) , left: standardSize(context) , top: mediumSize(context)),
+                margin: EdgeInsets.only(
+                    right: standardSize(context),
+                    left: standardSize(context),
+                    top: mediumSize(context)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Subtitle2txt("Friends"),
-                    Body2txt("See all (56)",color: Color(0xffb8c0d5),)
+                    Body2txt(
+                      "See all (56)",
+                      color: Color(0xffb8c0d5),
+                    )
                   ],
                 ),
               ), // title 3
@@ -86,10 +110,13 @@ class HomePageState extends State<HomePage> {
                 height: fullHeight(context) / 8.6,
                 // margin: EdgeInsets.symmetric(horizontal: standardSize(context)),
                 child: ListView.builder(
+                  padding: EdgeInsets.all(0),
+                  physics: BouncingScrollPhysics(),
                   shrinkWrap: true,
                   scrollDirection: Axis.horizontal,
-                  itemCount: 6,
-                  itemBuilder: (context, index) => memberCardWidget(memberList()[index],context),
+                  itemCount: memberList().length,
+                  itemBuilder: (context, index) =>
+                      memberCardWidget(memberList()[index], context),
                 ),
               ), // friends card
             ],
