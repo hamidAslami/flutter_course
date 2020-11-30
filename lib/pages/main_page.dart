@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/pages/my_profile_page.dart';
+import 'package:flutter_course_shop_ui/pages/see_all_food_page.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:line_icons/line_icons.dart';
+
+import 'home_page.dart';
 
 class MainPage extends StatefulWidget {
   @override
@@ -15,18 +18,18 @@ class MainPageState extends State<MainPage> {
   // ignore: missing_return
   Widget bodyWidget() {
     switch (index) {
-      /*case 0:
-        return YourPage();
-      case 1:
-        return YourPage();
-      case 2:
-        return YourPage();
-      case 3:
-        return YourPage();*/
-      case 4:
-        return MyProfilePage();
+      case 0:
+        return HomePage();
+      // case 1:
+      //   return YourPage();
+      // case 2:
+      //   return YourPage();
+      // case 3:
+      //   return YourPage();
+      // case 4:
+      //   return ();
       default:
-        return MyProfilePage();
+        return HomePage();
     }
   }
 
