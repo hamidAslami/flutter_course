@@ -10,9 +10,9 @@ List foodList() {
 
   // اینجا هر چقدر لازم داشتین میتونین غذای فیک ادد کنید
 
-  foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU',"Happy Bones", "394 Broome St, New York, NY 10013, USA", 1.2, memberList(), "italian", 4.7,"assets/friend3.jpg"));
-  foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3v02R_4Kh3DfU1iC1Ta0F0Vk3Ecc_O2n0A&usqp=CAU',"Uncle Boons", "394 Broome St, New York, NY 10013, USA", 3, memberList(), "chinese", 4.9,"assets/friend3.jpg"));
-  foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU',"Mix pizza", "394 Broome St, New York, NY 10013, USA", 1, memberList(), "italian", 4.7,"assets/friend3.jpg"));
+  foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU',"Happy Bones", "394 Broome St, New York, NY 10013, USA", 1.2, memberList(), "italian", 4.5,"assets/friend3.jpg"));
+  foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3v02R_4Kh3DfU1iC1Ta0F0Vk3Ecc_O2n0A&usqp=CAU',"Uncle Boons", "7 Spring St, New York, NY 10012, USA", 2.5, memberList(), "chinese", 4.3,"assets/friend3.jpg"));
+  foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU',"Happy Bones", "394 Broome St, New York, NY 10013, USA", 1.2, memberList(), "italian", 4.2,"assets/friend3.jpg"));
   foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsYQhzCm91T20Z-_2TWSvR9OGn-zA7QIWW-w&usqp=CAU',"Pizza", "394 Broome St, New York, NY 10013, USA",2.4, memberList(), "italian", 4.4,"assets/friend3.jpg"));
   foods.add(Food('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQabFqolj8H7WtcvIlSE02iUCJ1F7JCPJhD8g&usqp=CAU',"Beef", "394 Broome St, New York, NY 10013, USA", 2, memberList(), "italian", 4.3,"assets/friend3.jpg"));
 
@@ -26,6 +26,11 @@ List memberList() {
 
   members.add(Member("assets/friend2.jpg", ""));
   members.add(Member("assets/friend3.jpg", ""));
+  members.add(Member("assets/friend1.jpg", ""));
+  members.add(Member("assets/friend4.jpg", ""));
+  members.add(Member("assets/friend5.jpg", ""));
+  members.add(Member("assets/friend6.jpg", ""));
+
 
   return members;
 }
@@ -35,9 +40,10 @@ List memberList() {
 List categoryList() {
   List<Category> categories = new List();
 
-  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
-  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
-  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
+  categories.add(Category("Italian" , "https://mag.safarestan.com/wp-content/uploads/2017/12/%D8%BA%D8%B0%D8%A7%D9%87%D8%A7%DB%8C-%D8%A7%DB%8C%D8%AA%D8%A7%D9%84%DB%8C%D8%A7%DB%8C%DB%8C-696x522.jpg" , Colors.red , Colors.blueAccent));
+  categories.add(Category("Chinese" , "https://mstiran.com/resource/files/cache/attractions-china-chinese-dishes-top-7d1ac052003d71fbac0df3900ed61d91.jpg" , Colors.red , Colors.deepPurpleAccent));
+  categories.add(Category("Maxican" , "https://www.eligasht.com/Blog/wp-content/uploads/2018/07/beaf-taco.jpg" , Colors.blueAccent , Colors.blue));
+
 
   return categories;
 }
