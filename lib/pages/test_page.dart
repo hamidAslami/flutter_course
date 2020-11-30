@@ -10,9 +10,9 @@ class TestPage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Container(
         width: fullWidth(context),
-        child: Center(
-          child: categoryCard(),
-        ),
+        // child: Center(
+        //   child: categoryCard(),
+        // ),
         height: fullHeight(context),
       ),
     );

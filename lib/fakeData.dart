@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/models/catgoryModel.dart';
 import 'package:flutter_course_shop_ui/models/food_model.dart';
 import 'package:flutter_course_shop_ui/models/member_model.dart';
@@ -34,7 +35,9 @@ List memberList() {
 List categoryList() {
   List<Category> categories = new List();
 
-  categories.add(Category("image", "title"));
+  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
+  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
+  categories.add(Category("title" , "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU" , Colors.red , Colors.yellow));
 
   return categories;
 }

@@ -4,6 +4,8 @@ import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:line_icons/line_icons.dart';
 
+import 'home_page.dart';
+
 class MainPage extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => MainPageState();
@@ -24,9 +26,9 @@ class MainPageState extends State<MainPage> {
       case 3:
         return YourPage();*/
       case 4:
-        return MyProfilePage();
+        return HomePage();
       default:
-        return MyProfilePage();
+        return HomePage();
     }
   }
 
