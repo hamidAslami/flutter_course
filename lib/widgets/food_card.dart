@@ -8,7 +8,8 @@ import 'package:flutter_course_shop_ui/theme/text_style.dart';
 Widget foodCardWidget(Food food, BuildContext context) {
   return Container(
     margin: EdgeInsets.symmetric(
-         vertical: mediumSize(context)),
+         vertical: mediumSize(context),
+    horizontal: standardSize(context)),
     width: fullWidth(context),
     height: fullHeight(context) / 2.3,
     decoration: BoxDecoration(

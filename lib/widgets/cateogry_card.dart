@@ -1,10 +1,12 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_course_shop_ui/models/catgoryModel.dart';
+import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
-Widget categoryCard() {
+Widget categoryCard(Category category) {
   return Container(
-      width: 200,
-      height: 200,
+      width: 120,
+      height: 120,
       child: Stack(
         children: [
           Positioned.fill(
@@ -12,26 +14,20 @@ Widget categoryCard() {
               opacity: 0.3,
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(16),
-                child: Image.network(
-                  "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/chorizo-mozarella-gnocchi-bake-cropped-9ab73a3.jpg?quality=90&resize=700%2C636",
-                  fit: BoxFit.cover,
-                ),
+                child: Image.network(category.image, fit: BoxFit.cover),
               ),
             ),
           ),
           Align(
             alignment: Alignment.center,
-            child: Text(
-              "Chinese",
-              style: TextStyle(color: Colors.white, fontSize: 30,fontWeight: FontWeight.w700),
-            ),
+            child: Subtitle1txt(category.title,color: Colors.white,)
           )
         ],
       ),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(16),
           gradient: LinearGradient(
-              colors: [Colors.red, Colors.indigoAccent],
+              colors: [category.startColor , category.endColor],
               begin: Alignment(2, 0),
               tileMode: TileMode.clamp,
               end: Alignment(0, 2))));
