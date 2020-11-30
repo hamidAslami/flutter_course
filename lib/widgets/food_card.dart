@@ -11,7 +11,7 @@ Widget foodCardWidget(Food food, BuildContext context) {
          vertical: mediumSize(context),
     horizontal: standardSize(context)),
     width: fullWidth(context),
-    height: fullHeight(context) / 2.3,
+    height: fullHeight(context) / 2.5,
     decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(mediumSize(context)),
