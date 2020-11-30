@@ -26,7 +26,7 @@ class MainPageState extends State<MainPage> {
       case 3:
         return YourPage();*/
       case 4:
-        return MyProfilePage();
+        return HomePage();
       default:
         return HomePage();
     }

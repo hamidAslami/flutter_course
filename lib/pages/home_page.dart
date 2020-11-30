@@ -17,35 +17,39 @@ class HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.symmetric(horizontal: standardSize(context) , vertical: xxlargeSize(context)),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            searchBoxWidget("Find Restaurants"),
-            Container(
-              margin: EdgeInsets.symmetric(vertical: xlargeSize(context)),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Subtitle2txt("Trending Restaurants"),
-                  Body2txt("See all (45)",color: Color(0xffb8c0d5),)
-                ],
+      body: SingleChildScrollView(
+        child: Container(
+          width: fullWidth(context),
+          height: fullHeight(context),
+          margin: EdgeInsets.symmetric( vertical: xxlargeSize(context)),
+          child: Column(
+            mainAxisSize: MainAxisSize.max,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              searchBoxWidget("Find Restaurants"),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: xlargeSize(context)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Subtitle2txt("Trending Restaurants"),
+                    Body2txt("See all (45)",color: Color(0xffb8c0d5),)
+                  ],
+                ),
               ),
-            ),
-            Container(
-              width: fullWidth(context),
-
-              height: 200,
-              color: Colors.blue,
-              // child: ListView.builder(
-              //   shrinkWrap: true,
-              //   scrollDirection: Axis.horizontal,
-              //   itemCount: foodList().length,
-              //   itemBuilder: (context, index) => foodCardWidget(foodList()[index], context),
-              // ),
-            )
-          ],
+              Container(
+                height: fullHeight(context) / 1.8,
+                width: fullWidth(context),
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: foodList().length,
+                  itemBuilder: (context, index) => foodCardWidget(foodList()[0], context),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

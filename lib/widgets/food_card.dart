@@ -9,7 +9,7 @@ Widget foodCardWidget(Food food, BuildContext context) {
   return Container(
     margin: EdgeInsets.symmetric(
          vertical: mediumSize(context)),
-    width: double.infinity,
+    width: fullWidth(context),
     height: fullHeight(context) / 2.3,
     decoration: BoxDecoration(
         color: Colors.white,
