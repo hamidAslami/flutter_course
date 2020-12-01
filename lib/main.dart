@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_course_shop_ui/pages/category_vertical_list_page.dart';
+import 'package:flutter_course_shop_ui/pages/notifications_page.dart';
 import 'package:flutter_course_shop_ui/pages/see_all_food_page.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SeeAllFoodPage(),
+      home: CategoryListPage2(),
     );
   }
 }

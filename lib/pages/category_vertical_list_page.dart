@@ -20,6 +20,7 @@ class CategoryListPageState extends State<CategoryListPage2> {
       appBar: AppBar(
         brightness: Brightness.light,
         backgroundColor: Colors.white,
+        elevation: largeSize(context),
         title: Body1txt(
           "Category",
           color: Color(0xff222455),
