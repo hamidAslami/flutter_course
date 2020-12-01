@@ -4,12 +4,12 @@ import 'package:flutter_course_shop_ui/models/catgoryModel.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
-Widget categoryCard(Category category , BuildContext context) {
+Widget categoryCard(Category category, BuildContext context) {
   return AspectRatio(
-    aspectRatio: 1/1,
+    aspectRatio: 1 / 1,
     child: Container(
-      margin: EdgeInsets.symmetric(horizontal: mediumSize(context),vertical: mediumSize(
-          context)),
+        margin: EdgeInsets.symmetric(
+            horizontal: mediumSize(context), vertical: mediumSize(context)),
         child: Stack(
           children: [
             Positioned.fill(
@@ -22,15 +22,17 @@ Widget categoryCard(Category category , BuildContext context) {
               ),
             ),
             Align(
-              alignment: Alignment.center,
-              child: Subtitle1txt(category.title,color: Colors.white,)
-            )
+                alignment: Alignment.center,
+                child: Subtitle1txt(
+                  category.title,
+                  color: Colors.white,
+                ))
           ],
         ),
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(16),
             gradient: LinearGradient(
-                colors: [category.startColor , category.endColor],
+                colors: [category.startColor, category.endColor],
                 begin: Alignment(2, 0),
                 tileMode: TileMode.clamp,
                 end: Alignment(0, 2)))),
