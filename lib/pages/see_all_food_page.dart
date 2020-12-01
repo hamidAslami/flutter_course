@@ -20,7 +20,6 @@ class SeeAllFoodPageState extends State<SeeAllFoodPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        elevation: 0,
         brightness: Brightness.light,
         backgroundColor: Colors.white,
         title: Subtitle2txt("Trending Restaurants"),
@@ -36,12 +35,13 @@ class SeeAllFoodPageState extends State<SeeAllFoodPage> {
       ),
       body: SingleChildScrollView(
         child: Container(
-          margin: EdgeInsets.only(top: xxlargeSize(context)),
+          margin: EdgeInsets.only(top: mediumSize(context)),
           child: Column(
             children: [
               Container(
                 child: searchBoxWidget("Search"),
-                margin: EdgeInsets.symmetric(horizontal: standardSize(context)),
+                margin: EdgeInsets.symmetric(horizontal: standardSize(context),vertical: mediumSize(
+                    context)),
               ),
               ListView.builder(
                 shrinkWrap: true,
