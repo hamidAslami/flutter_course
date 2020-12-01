@@ -1,11 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_course_shop_ui/models/category_vertical_list_model.dart';
+import 'package:flutter_course_shop_ui/models/catgoryModel.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 
 Widget categoryVerticalListWidgets(
-    CategoryVerticalList categoryVerticalList, BuildContext context) {
+    Category category, BuildContext context) {
   return Container(
       margin: EdgeInsets.all(mediumSize(context)),
       width: fullWidth(context),
@@ -18,7 +18,7 @@ Widget categoryVerticalListWidgets(
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(8),
                 child: Image.network(
-                  categoryVerticalList.foodImage,
+                  category.image,
                   fit: BoxFit.cover,
                 ),
               ),
@@ -27,7 +27,7 @@ Widget categoryVerticalListWidgets(
           Align(
             alignment: Alignment.center,
             child: Subtitle2txt(
-              categoryVerticalList.foodModel,
+              category.title,
               color: Colors.white,
             ),
           ),
@@ -48,8 +48,8 @@ Widget categoryVerticalListWidgets(
           borderRadius: BorderRadius.circular(7),
           gradient: LinearGradient(
               colors: [
-                categoryVerticalList.startColor,
-                categoryVerticalList.endColor
+                category.startColor,
+                category.endColor
               ],
               begin: Alignment(2, 0),
               tileMode: TileMode.clamp,

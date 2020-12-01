@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/models/catgoryModel.dart';
 import 'package:flutter_course_shop_ui/models/food_model.dart';
 import 'package:flutter_course_shop_ui/models/member_model.dart';
-
-import 'models/category_vertical_list_model.dart';
 import 'models/notifications_model.dart';
 
 List foodList() {
@@ -167,49 +165,49 @@ List notificationList() {
 }
 
 List listCategory() {
-  List<CategoryVerticalList> category = new List();
-  category.add(CategoryVerticalList(
+  List<Category> category = new List();
+  category.add(Category(
       "Italian",
       "https://images.ctfassets.net/81w9kb7f1jq4/7gyLrVI5ZxAHXyQDRvom8M/772c0cbc02160f9f6cc2c67274866298/LG_wildfire_trio_homepage_hero.jpg",
       Color(0xfff67275),
       Color(0xfff28b5a)));
 
-  category.add(CategoryVerticalList(
+  category.add(Category(
       "Chinese",
       "https://images.squarespace-cdn.com/content/v1/588ca4ca29687f771600b238/1536805943840-TR6AYKZ6HZDKHT8M59XI/ke17ZwdGBToddI8pDm48kLkXF2pIyv_F2eUT9F60jBl7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z4YTzHvnKhyp6Da-NYroOW3ZGjoBKy3azqku80C789l0iyqMbMesKd95J-X4EagrgU9L3Sa3U8cogeb0tjXbfawd0urKshkc5MgdBeJmALQKw/Life+Alive_Brookline%2C+MA_Food+01_fl7a2483_Photo+by+Abigail+Connor%2C+Courtesy+of+Life+Alive.JPG",
       Color(0xffd81010),
       Color(0xff9d44d2)));
-  category.add(CategoryVerticalList(
+  category.add(Category(
       "Maxican",
       "https://uupload.ir/files/90nq_1.jpg",
       Color(0xff1142cc),
       Color(0xff2aa5d7)));
 
-  category.add(CategoryVerticalList(
+  category.add(Category(
       "Thai",
       "https://www.expatica.com/app/uploads/sites/3/2015/08/dutch-indonesian-food-1920x1080.jpg",
       Color(0xff11a36b),
       Color(0xff28b6c1)));
 
-  category.add(CategoryVerticalList(
+  category.add(Category(
       "Arabian",
       "https://www.itl.cat/pngfile/big/290-2906065_indian-food-wallpaper-hd.jpg",
       Color(0xffec6e16),
       Color(0xffc837a3)));
 
-  category.add(CategoryVerticalList(
+  category.add(Category(
       "Indian",
       "https://media-cdn.tripadvisor.com/media/photo-s/1a/13/73/67/indonesian-food.jpg",
       Color(0xff3100e4),
       Color(0xffcf3c92)));
 
-  category.add(CategoryVerticalList(
+  category.add(Category(
       "American",
       "https://i.pinimg.com/originals/6f/24/fe/6f24fe4c1a2986c0957ac69411db1793.jpg",
       Color(0xff1142cc),
       Color(0xff2aa5d7)));
 
-  category.add(CategoryVerticalList(
+  category.add(Category(
       "Korean",
       "https://i.pinimg.com/736x/d4/9f/3c/d49f3cb4142b7557ce184e6e2d5974fe.jpg",
       Color(0xffff2330),

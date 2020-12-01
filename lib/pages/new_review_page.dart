@@ -45,6 +45,7 @@ class NewReviewPageState extends State<NewReviewPage> {
           margin: EdgeInsets.only(
             top: xlargeSize(context),
             left: largeSize(context),
+            bottom: xlargeSize(context),
             right: largeSize(context),
           ),
           child: Column(children: [
@@ -59,13 +60,13 @@ class NewReviewPageState extends State<NewReviewPage> {
               alignment: Alignment.center,
               // ignore: missing_required_param
               child: RatingBar.builder(
-                initialRating: 0,
+                initialRating: 2,
                 itemPadding: EdgeInsets.symmetric(horizontal: 5.0),
                 itemCount: 5,
                 direction: Axis.horizontal,
                 itemBuilder: (context, index) => Icon(
                   Icons.star,
-                  color: Colors.white54,
+                  color: Colors.orange,
                 ),
               ),
               margin: EdgeInsets.only(

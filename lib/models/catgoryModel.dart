@@ -7,5 +7,5 @@ class Category {
   Color endColor;
 
 
-  Category(this.title , this.image , this.startColor , this.endColor);
+  Category(this.title, this.image, this.startColor, this.endColor);
 }

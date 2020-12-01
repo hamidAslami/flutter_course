@@ -7,17 +7,18 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 import '../fakeData.dart';
 
-class CategoryListPage extends StatefulWidget {
+class CategoryListPage2 extends StatefulWidget {
   @override
   State<StatefulWidget> createState() => CategoryListPageState();
 }
 
-class CategoryListPageState extends State<CategoryListPage> {
+class CategoryListPageState extends State<CategoryListPage2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        brightness: Brightness.light,
         backgroundColor: Colors.white,
         title: Body1txt(
           "Category",

@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_course_shop_ui/models/category_vertical_list_model.dart';
 import 'package:flutter_course_shop_ui/pages/category_vertical_list_page.dart';
-import 'package:flutter_course_shop_ui/pages/home_page.dart';
-import 'package:flutter_course_shop_ui/pages/main_page.dart';
-import 'package:flutter_course_shop_ui/pages/my_profile_page.dart';
-import 'package:flutter_course_shop_ui/pages/new_review_page.dart';
-import 'package:flutter_course_shop_ui/pages/notifications_page.dart';
-import 'package:flutter_course_shop_ui/pages/test_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: NewReviewPage(),
+      home: CategoryListPage2(),
     );
   }
 }
