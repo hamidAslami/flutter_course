@@ -65,6 +65,11 @@ class MainPageState extends State<MainPage> {
               title: Text('My Profile'), icon: Icon((LineIcons.user))),
         ],
       ),
+      appBar: AppBar(
+        flexibleSpace: Stack(
+
+        ),
+      ),
       body: bodyWidget(),
     );
   }

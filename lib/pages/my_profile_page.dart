@@ -14,13 +14,19 @@ class MyProfilePageState extends State<MyProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.grey.shade50,
+        elevation: 0,
+        leading: Icon(Icons.arrow_back_ios,color: Colors.black,),
+        centerTitle: true,
+        title: Subtitle2txt('Profile'),
+      ),
         body: SingleChildScrollView(
       child: Center(
         child: Container(
-          margin: EdgeInsets.only(top: xxlargeSize(context)),
+          margin: EdgeInsets.only(top: xlargeSize(context)),
           child: Column(
             children: [
-              Headline5txt('My Profile'),
               Container(
                 margin: EdgeInsets.only(top: xxlargeSize(context)),
                 width: fullWidth(context) / 2.8,
@@ -52,11 +58,11 @@ class MyProfilePageState extends State<MyProfilePage> {
                   children: [
                     Column(
                       children: [
-                        Subtitle2txt(
+                        Body1txt(
                           '250',
                           color: Color(0xff5663ff),
                         ),
-                        Body1txt(
+                        Body2txt(
                           'Reviews',
                           color: Colors.grey,
                         )
@@ -69,11 +75,11 @@ class MyProfilePageState extends State<MyProfilePage> {
                     ),
                     Column(
                       children: [
-                        Subtitle2txt(
+                        Body1txt(
                           '100k',
                           color: Color(0xff5663ff),
                         ),
-                        Body1txt(
+                        Body2txt(
                           'Followers',
                           color: Colors.grey,
                         )
@@ -86,11 +92,11 @@ class MyProfilePageState extends State<MyProfilePage> {
                     ),
                     Column(
                       children: [
-                        Subtitle2txt(
+                        Body1txt(
                           '30',
                           color: Color(0xff5663ff),
                         ),
-                        Body1txt(
+                        Body2txt(
                           'Following',
                           color: Colors.grey,
                         )
@@ -100,7 +106,7 @@ class MyProfilePageState extends State<MyProfilePage> {
                 ),
               ), // Status
               Container(
-                margin: EdgeInsets.symmetric(horizontal: xxlargeSize(context)),
+                margin: EdgeInsets.symmetric(horizontal: xlargeSize(context)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
@@ -111,25 +117,26 @@ class MyProfilePageState extends State<MyProfilePage> {
                               BorderRadius.circular(xxSmallSize(context))),
                       color: Color(0xff5663ff),
                       padding: EdgeInsets.symmetric(
-                          horizontal: largeSize(context),
+                          horizontal: xxlargeSize(context),
                           vertical: mediumSize(context)),
-                      child: Subtitle2txt(
-                        'Edit Profile',
+                      child: Body1txt(
+                        'Follow',
                         color: Colors.white,
                       ),
                     ), // Edit Profile
                     RaisedButton(
                       onPressed: () {},
                       shape: RoundedRectangleBorder(
+                        side: BorderSide(color: Colors.grey,width: 0.5),
                           borderRadius:
                               BorderRadius.circular(xxSmallSize(context))),
                       color: Colors.white,
-                      elevation: 2,
+                      elevation: 0,
                       padding: EdgeInsets.symmetric(
                           horizontal: xxlargeSize(context),
                           vertical: mediumSize(context)),
-                      child: Subtitle2txt(
-                        'Setting',
+                      child: Body1txt(
+                        'Back',
                         color: Color(0xff5663ff),
                       ),
                     ) // Setting

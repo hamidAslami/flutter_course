@@ -31,7 +31,6 @@ class CategoryListPageState extends State<CategoryListPage2> {
             "assets/back ios.svg",
           ),
         ),
-        leadingWidth: fullWidth(context) / 13,
         centerTitle: true,
         actions: [
           Container(
