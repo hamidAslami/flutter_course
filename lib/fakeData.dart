@@ -232,10 +232,10 @@ List menuFood(){
 List ratingPeople(){
   List<ReviewRating> reviewRating =new List();
 
-  reviewRating.add(ReviewRating('', 'Collin Fields', 'it is a food very very good', 4.5));
-  reviewRating.add(ReviewRating('', 'Jennifer Frost', 'It was not a bad restaurant, but it is even better', 3.5));
-  reviewRating.add(ReviewRating('', 'John Anderson', 'It was a wonderful restaurant in my opinion', 5));
-  reviewRating.add(ReviewRating('', 'Josef Moses', 'The food in this restaurant was excellent and had a difficult appearance', 4.5));
+  reviewRating.add(ReviewRating('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxDrCR5SfO2zzeBNLF9U9xbjlC8-ToAA68g&usqp=CAU', 'Collin Fields', 'it is a food very very good', 4.5));
+  reviewRating.add(ReviewRating('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnAhsHgOldozR5d_-2lJbnR9qv0g5X2g8HAQ&usqp=CAU', 'Jennifer Frost', 'It was not a bad restaurant, but it is even better', 3.5));
+  reviewRating.add(ReviewRating('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvxDrCR5SfO2zzeBNLF9U9xbjlC8-ToAA68g&usqp=CAU', 'John Anderson', 'It was a wonderful restaurant in my opinion', 5));
+  reviewRating.add(ReviewRating('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnAhsHgOldozR5d_-2lJbnR9qv0g5X2g8HAQ&usqp=CAU', 'Josef Moses', 'The food in this restaurant was excellent and had a difficult appearance', 4.5));
 
   return reviewRating;
 }

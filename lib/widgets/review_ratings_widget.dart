@@ -19,7 +19,7 @@ Widget ratingBoxWidget(ReviewRating ratings,BuildContext context){
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: AssetImage(
+                image: NetworkImage(
                   ratings.photoPeople
                 ),
               )),
