@@ -5,43 +5,41 @@ import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-Widget ratingBoxWidget(ReviewRating ratings,BuildContext context){
+Widget ratingBoxWidget(ReviewRating ratings, BuildContext context) {
   return Container(
-    child:Row(
+    child: Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-          margin: EdgeInsets.symmetric(vertical: 9,horizontal: 8),
-          width: fullWidth(context)/6,
-          height: fullWidth(context)/6,
+          margin: EdgeInsets.symmetric(vertical: 9, horizontal: 8),
+          width: fullWidth(context) / 6,
+          height: fullWidth(context) / 6,
           decoration: BoxDecoration(
               color: Colors.white,
               shape: BoxShape.circle,
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: NetworkImage(
-                  ratings.photoPeople
-                ),
+                image: NetworkImage(ratings.photoPeople),
               )),
-        ),//image
+        ), //image
         Expanded(
           flex: 3,
           child: Container(
-            margin: EdgeInsets.only(left: 6,right: 8),
+            margin: EdgeInsets.only(left: 6, right: 8),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
-
               children: [
                 Container(
-                  margin: EdgeInsets.only(bottom: smallSize(context),),
-                  child: Body1txt(
-                    ratings.peopleName
+                  margin: EdgeInsets.only(
+                    bottom: smallSize(context),
                   ),
+                  child: Body1txt(ratings.peopleName),
                 ),
-                Text(ratings.peopleComment,maxLines: 1,style: GoogleFonts.openSans(
-                  fontSize: 12,
-                  color: Colors.grey
-                ),)
+                Text(
+                  ratings.peopleComment,
+                  maxLines: 1,
+                  style: GoogleFonts.openSans(fontSize: 12, color: Colors.grey),
+                )
               ],
             ),
           ),
@@ -64,8 +62,7 @@ Widget ratingBoxWidget(ReviewRating ratings,BuildContext context){
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Icon(Icons.star,
-                  color: Colors.yellow.shade700,
-                  size: largeSize(context)),
+                  color: Colors.yellow.shade700, size: largeSize(context)),
               Captiontxt(
                 ratings.rating.toString(),
                 color: Colors.green,

@@ -32,7 +32,6 @@ class FoodDetailsState extends State<FoodDetails> {
                 ),
                 Positioned(
                   top: largeSize(context),
-                  bottom: mediumSize(context),
                   right: xSmallSize(context),
                   left: xSmallSize(context),
                   child: Column(
@@ -46,9 +45,7 @@ class FoodDetailsState extends State<FoodDetails> {
                                 color: Colors.white,
                                 size: fullHeight(context) / 24,
                               ),
-                              onPressed: () {
-                                Navigator.pop(context);
-                              }),
+                              onPressed: () {}),
                           Expanded(
                             child: SizedBox(),
                           ),
@@ -70,17 +67,24 @@ class FoodDetailsState extends State<FoodDetails> {
                           ),
                         ],
                       ),
-                      ClipRect(
-                          child: BackdropFilter(
+                    ],
+                  ),
+                ),
+                Positioned(
+                  left: xxlargeSize(context),
+                  bottom: mediumSize(context),
+                  right: xxlargeSize(context),
+                  child: ClipRect(
+                      child: BackdropFilter(
                         filter: ImageFilter.blur(sigmaX: 4.0, sigmaY: 4.0),
                         child: Container(
                           width: fullWidth(context) / 1.25,
-                          padding: EdgeInsets.symmetric(
-                              vertical: xSmallSize(context)),
+                          padding:
+                          EdgeInsets.symmetric(vertical: xSmallSize(context)),
                           decoration: new BoxDecoration(
                               color: Colors.white10.withOpacity(0.2),
                               borderRadius:
-                                  BorderRadius.circular(xxlargeSize(context))),
+                              BorderRadius.circular(xxlargeSize(context))),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
@@ -89,8 +93,7 @@ class FoodDetailsState extends State<FoodDetails> {
                                       horizontal: xxSmallSize(context),
                                       vertical: xxSmallSize(context)),
                                   decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
+                                      color: Colors.white, shape: BoxShape.circle),
                                   child: Icon(
                                     Icons.phone,
                                     size: mediumSize(context),
@@ -104,8 +107,7 @@ class FoodDetailsState extends State<FoodDetails> {
                                       horizontal: xxSmallSize(context),
                                       vertical: xxSmallSize(context)),
                                   decoration: BoxDecoration(
-                                      color: Colors.white,
-                                      shape: BoxShape.circle),
+                                      color: Colors.white, shape: BoxShape.circle),
                                   child: Icon(
                                     Icons.directions,
                                     size: mediumSize(context),
@@ -118,10 +120,7 @@ class FoodDetailsState extends State<FoodDetails> {
                           ),
                         ),
                       )), // Phone Number & Direction
-                    ],
-                  ),
-                )
-              ],
+                )              ],
             ),
           )),
       SliverToBoxAdapter(

@@ -15,8 +15,8 @@ class MyProfilePageState extends State<MyProfilePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        brightness: Brightness.light,
         backgroundColor: Colors.grey.shade50,
-        elevation: 0,
         leading: Icon(Icons.arrow_back_ios,color: Colors.black,),
         centerTitle: true,
         title: Subtitle2txt('Profile'),
