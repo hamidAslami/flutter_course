@@ -7,60 +7,72 @@ import 'package:google_fonts/google_fonts.dart';
 
 Widget ratingBoxWidget(ReviewRating ratings,BuildContext context){
   return Container(
-    width: fullWidth(context),
-    height: fullHeight(context)/10,
-    child: Row(
+    child:Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         Container(
-          width: fullWidth(context)/5,
-          height: fullHeight(context)/10,
+          margin: EdgeInsets.symmetric(vertical: 9,horizontal: 8),
+          width: fullWidth(context)/6,
+          height: fullWidth(context)/6,
           decoration: BoxDecoration(
-            image: DecorationImage(
-              image: NetworkImage(ratings.photoPeople),fit: BoxFit.cover
-            ),
-            shape: BoxShape.circle,
-            border: Border.all(color: Colors.red,width: 10)
-          ),
-        ),
-        Column(
-          children: [
-            Row(
+              color: Colors.white,
+              shape: BoxShape.circle,
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(
+                  ratings.photoPeople
+                ),
+              )),
+        ),//image
+        Expanded(
+          flex: 3,
+          child: Container(
+            margin: EdgeInsets.only(left: 6,right: 8),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+
               children: [
-                Body1txt(ratings.peopleName),
-                Expanded(child: SizedBox()),
                 Container(
-                  padding: EdgeInsets.symmetric(horizontal: xSmallSize(context),vertical: xxSmallSize(context)),
-                  decoration: BoxDecoration(
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.grey.shade300,
-                            spreadRadius: 0.5,
-                            blurRadius: 2.3,
-                            offset: Offset(0, 0))
-                      ],
-                      borderRadius: BorderRadius.circular(mediumSize(context)),
-                      color: Colors.white),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Icon(Icons.star,
-                          color: Colors.yellow.shade700,
-                          size: largeSize(context)),
-                      Captiontxt(
-                        ratings.rating.toString(),
-                        color: Colors.green,
-                      ),
-                    ],
+                  margin: EdgeInsets.only(bottom: smallSize(context),),
+                  child: Body1txt(
+                    ratings.peopleName
                   ),
                 ),
+                Text(ratings.peopleComment,maxLines: 1,style: GoogleFonts.openSans(
+                  fontSize: 12,
+                  color: Colors.grey
+                ),)
               ],
             ),
-            Text(ratings.peopleComment,maxLines: 1,style: GoogleFonts.openSans(
-              color: Colors.grey,
-              fontSize: 12,
-            ),)
-          ],
+          ),
         ),
+
+        Container(
+          width: fullWidth(context) / 7.5,
+          height: fullHeight(context) / 25,
+          decoration: BoxDecoration(
+              boxShadow: [
+                BoxShadow(
+                    color: Colors.grey.shade300,
+                    spreadRadius: 0.5,
+                    blurRadius: 2.3,
+                    offset: Offset(0, 0))
+              ],
+              borderRadius: BorderRadius.circular(mediumSize(context)),
+              color: Colors.white),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.star,
+                  color: Colors.yellow.shade700,
+                  size: largeSize(context)),
+              Captiontxt(
+                ratings.rating.toString(),
+                color: Colors.green,
+              ),
+            ],
+          ),
+        )
       ],
     ),
   );

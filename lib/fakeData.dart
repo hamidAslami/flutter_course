@@ -232,10 +232,10 @@ List menuFood(){
 List ratingPeople(){
   List<ReviewRating> reviewRating =new List();
 
-  reviewRating.add(ReviewRating('https://lh3.googleusercontent.com/proxy/FjsO-NLcJANfOXKlvB97FaUXOUacg-5O7z-MIVBNIwYc4EL3FcMrgqcCCYbq7qQXLZDWIp9IDozh4bqtKhTfL5N2k0hUmBce', 'Collin Fields', 'it is a food very very good', 4.5));
-  reviewRating.add(ReviewRating('https://mlxomezlqo9o.i.optimole.com/yESUZg-I9YYj3rg/w:auto/h:auto/q:auto/http://www.eghstudio.com/wp-content/uploads/2019/02/EGH-Headshot-Photographer-Studio-06-1024x683.jpg', 'Jennifer Frost', 'It was not a bad restaurant, but it is even better', 3.5));
-  reviewRating.add(ReviewRating('https://personal.lse.ac.uk/fischerg/Assets/Images/FischerForPersonalWebsite.jpg', 'John Anderson', 'It was a wonderful restaurant in my opinion', 5));
-  reviewRating.add(ReviewRating('https://personal.lse.ac.uk/fischerg/Assets/Images/FischerForPersonalWebsite.jpg', 'Josef Moses', 'The food in this restaurant was excellent and had a difficult appearance', 4.5));
+  reviewRating.add(ReviewRating('', 'Collin Fields', 'it is a food very very good', 4.5));
+  reviewRating.add(ReviewRating('', 'Jennifer Frost', 'It was not a bad restaurant, but it is even better', 3.5));
+  reviewRating.add(ReviewRating('', 'John Anderson', 'It was a wonderful restaurant in my opinion', 5));
+  reviewRating.add(ReviewRating('', 'Josef Moses', 'The food in this restaurant was excellent and had a difficult appearance', 4.5));
 
   return reviewRating;
 }
