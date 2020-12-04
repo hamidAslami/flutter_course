@@ -26,8 +26,8 @@ class MainPageState extends State<MainPage> {
       //   return YourPage();
       // case 3:
       //   return YourPage();
-      // case 4:
-      //   return ();
+      case 4:
+         return MyProfilePage();
       default:
         return HomePage();
     }
@@ -64,11 +64,6 @@ class MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
               title: Text('My Profile'), icon: Icon((LineIcons.user))),
         ],
-      ),
-      appBar: AppBar(
-        flexibleSpace: Stack(
-
-        ),
       ),
       body: bodyWidget(),
     );

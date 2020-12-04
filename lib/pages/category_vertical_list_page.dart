@@ -32,7 +32,7 @@ class CategoryListPageState extends State<CategoryListPage2> {
           ),
         ),
         centerTitle: true,
-        actions: [
+          actions: [
           Container(
             margin: EdgeInsets.only(right: largeSize(context)),
             child: SvgPicture.asset("assets/search icon.svg"),

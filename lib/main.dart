@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_course_shop_ui/pages/category_vertical_list_page.dart';
+import 'package:flutter_course_shop_ui/pages/food_details_page.dart';
+import 'package:flutter_course_shop_ui/pages/main_page.dart';
 import 'package:flutter_course_shop_ui/pages/my_profile_page.dart';
 import 'package:flutter_course_shop_ui/pages/notifications_page.dart';
 import 'package:flutter_course_shop_ui/pages/see_all_food_page.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyProfilePage(),
+      home: FoodDetails(),
     );
   }
 }

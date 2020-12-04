@@ -115,7 +115,7 @@ class HomePageState extends State<HomePage> {
               ), // title 3
               Container(
                 width: fullWidth(context),
-                height: fullHeight(context) / 8.6,
+                height: fullHeight(context) / 8.5,
                 // margin: EdgeInsets.symmetric(horizontal: standardSize(context)),
                 child: ListView.builder(
                   padding: EdgeInsets.all(0),

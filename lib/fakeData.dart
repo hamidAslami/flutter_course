@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_course_shop_ui/models/catgoryModel.dart';
 import 'package:flutter_course_shop_ui/models/food_model.dart';
 import 'package:flutter_course_shop_ui/models/member_model.dart';
+import 'package:flutter_course_shop_ui/models/menu_photos_model.dart';
+import 'package:flutter_course_shop_ui/models/rating_people_model.dart';
 import 'models/notifications_model.dart';
 
 List foodList() {
@@ -214,4 +216,26 @@ List listCategory() {
       Color(0xfffb876a)));
 
   return category;
+}
+
+List menuFood(){
+  List<MenuPhotos> foodPhoto = new List();
+
+  foodPhoto.add(MenuPhotos('https://cdn.cnn.com/cnnnext/dam/assets/191115120957-immigrant-food-columbia-road.jpg'));
+  foodPhoto.add(MenuPhotos('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2hsTK4k8xjJx5QGk5jfZi8URo4w05bacotw&usqp=CAU'));
+  foodPhoto.add(MenuPhotos('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Ru_5sa20YAdJgHe4LgLrvCM5SrsohpCZlA&usqp=CAU'));
+  foodPhoto.add(MenuPhotos('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9V5lUO1pHCKaIVWvnyIbjUMsddwWVwkNkhg&usqp=CAU'));
+
+  return foodPhoto;
+}
+
+List ratingPeople(){
+  List<ReviewRating> reviewRating =new List();
+
+  reviewRating.add(ReviewRating('https://lh3.googleusercontent.com/proxy/FjsO-NLcJANfOXKlvB97FaUXOUacg-5O7z-MIVBNIwYc4EL3FcMrgqcCCYbq7qQXLZDWIp9IDozh4bqtKhTfL5N2k0hUmBce', 'Collin Fields', 'it is a food very very good', 4.5));
+  reviewRating.add(ReviewRating('https://mlxomezlqo9o.i.optimole.com/yESUZg-I9YYj3rg/w:auto/h:auto/q:auto/http://www.eghstudio.com/wp-content/uploads/2019/02/EGH-Headshot-Photographer-Studio-06-1024x683.jpg', 'Jennifer Frost', 'It was not a bad restaurant, but it is even better', 3.5));
+  reviewRating.add(ReviewRating('https://personal.lse.ac.uk/fischerg/Assets/Images/FischerForPersonalWebsite.jpg', 'John Anderson', 'It was a wonderful restaurant in my opinion', 5));
+  reviewRating.add(ReviewRating('https://personal.lse.ac.uk/fischerg/Assets/Images/FischerForPersonalWebsite.jpg', 'Josef Moses', 'The food in this restaurant was excellent and had a difficult appearance', 4.5));
+
+  return reviewRating;
 }
