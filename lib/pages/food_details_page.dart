@@ -19,6 +19,7 @@ class FoodDetailsState extends State<FoodDetails> {
     return Scaffold(
         body: CustomScrollView(physics: BouncingScrollPhysics(), slivers: [
       SliverAppBar(
+          backgroundColor: Colors.transparent,
           expandedHeight: fullHeight(context) / 2.5,
           flexibleSpace: FlexibleSpaceBar(
             background: Stack(
@@ -45,7 +46,9 @@ class FoodDetailsState extends State<FoodDetails> {
                                 color: Colors.white,
                                 size: fullHeight(context) / 24,
                               ),
-                              onPressed: () {}),
+                              onPressed: () {
+                                Navigator.pop(context);
+                              }),
                           Expanded(
                             child: SizedBox(),
                           ),
@@ -122,18 +125,22 @@ class FoodDetailsState extends State<FoodDetails> {
             ),
           )),
       SliverToBoxAdapter(
-          child: Container(
-            margin: EdgeInsets.symmetric(horizontal: largeSize(context),vertical: smallSize(context)),
-            child: Column(
-              children: [
-                Row(children: [
+        child: Container(
+          margin: EdgeInsets.symmetric(
+              horizontal: largeSize(context), vertical: smallSize(context)),
+          child: Column(
+            children: [
+              Row(
+                children: [
                   Subtitle1txt('Happy Bones'),
                   Container(
-                    margin: EdgeInsets.symmetric(horizontal: smallSize(context)),
+                    margin:
+                        EdgeInsets.symmetric(horizontal: smallSize(context)),
                     padding: EdgeInsets.symmetric(
                         horizontal: xxSmallSize(context), vertical: 3),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(xlargeSize(context)),
+                        borderRadius:
+                            BorderRadius.circular(xlargeSize(context)),
                         gradient: LinearGradient(
                           colors: [
                             (Colors.orange.shade400),
@@ -149,9 +156,10 @@ class FoodDetailsState extends State<FoodDetails> {
                   ), // ,
                   Container(
                     padding: EdgeInsets.symmetric(
-                        horizontal:xxSmallSize(context), vertical: 3),
+                        horizontal: xxSmallSize(context), vertical: 3),
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(xlargeSize(context)),
+                        borderRadius:
+                            BorderRadius.circular(xlargeSize(context)),
                         gradient: LinearGradient(
                           colors: [
                             (Colors.blueAccent.shade200),
@@ -169,7 +177,9 @@ class FoodDetailsState extends State<FoodDetails> {
                     child: SizedBox(),
                   ),
                   Container(
-                    padding: EdgeInsets.symmetric(horizontal: xSmallSize(context),vertical: xxSmallSize(context)),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: xSmallSize(context),
+                        vertical: xxSmallSize(context)),
                     decoration: BoxDecoration(
                         boxShadow: [
                           BoxShadow(
@@ -178,7 +188,8 @@ class FoodDetailsState extends State<FoodDetails> {
                               blurRadius: 2.3,
                               offset: Offset(0, 0))
                         ],
-                        borderRadius: BorderRadius.circular(mediumSize(context)),
+                        borderRadius:
+                            BorderRadius.circular(mediumSize(context)),
                         color: Colors.white),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -194,93 +205,111 @@ class FoodDetailsState extends State<FoodDetails> {
                     ),
                   ),
                 ],
+              ),
+              Container(
+                margin: EdgeInsets.only(top: xSmallSize(context)),
+                alignment: AlignmentDirectional.centerStart,
+                child: Body2txt(
+                  "394 Broome St, New York, NY 10013, USA",
+                  color: Colors.grey,
                 ),
-                Container(
-                  margin: EdgeInsets.only(top: xSmallSize(context)),
-                  alignment: AlignmentDirectional.centerStart,
-                  child: Body2txt(
-                    "394 Broome St, New York, NY 10013, USA",
-                    color: Colors.grey,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(right: xxSmallSize(context)),
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Body2txt(
+                      "Open Now",
+                      color: Colors.red,
+                    ),
                   ),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
+                  Container(
+                    margin: EdgeInsets.only(right: xxSmallSize(context)),
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Body2txt(
+                      "daily time",
+                      color: Colors.grey,
+                    ),
+                  ),
+                  Container(
+                    alignment: AlignmentDirectional.centerStart,
+                    child: Body2txt(
+                      "9:30 am to 11:30 pm",
+                      color: Colors.red,
+                    ),
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.arrow_drop_down),
+                    onPressed: () {},
+                  )
+                ],
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: smallSize(context)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
-                      margin: EdgeInsets.only(right: xxSmallSize(context)),
-                      alignment: AlignmentDirectional.centerStart,
-                      child: Body2txt(
-                        "Open Now",
-                        color: Colors.red,
-                      ),
+                    Subtitle2txt(
+                      'Menu & Photos',
+                      color: Colors.grey.shade800,
                     ),
-                    Container(
-                      margin: EdgeInsets.only(right: xxSmallSize(context)),
-                      alignment: AlignmentDirectional.centerStart,
-                      child: Body2txt(
-                        "daily time",
-                        color: Colors.grey,
-                      ),
-                    ),
-                    Container(
-                      alignment: AlignmentDirectional.centerStart,
-                      child: Body2txt(
-                        "9:30 am to 11:30 pm",
-                        color: Colors.red,
-                      ),
-                    ),
-                    IconButton(icon: Icon(Icons.arrow_drop_down),onPressed: () {  },)
+                    GestureDetector(
+                        onTap: () {},
+                        child: Body2txt(
+                          'See all (32)',
+                          color: Colors.grey,
+                        ))
                   ],
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: smallSize(context)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Subtitle2txt('Menu & Photos',color: Colors.grey.shade800,),
-                      Body2txt('See all (32)',color: Colors.grey,)
-                    ],
-                  ),
-                ),
-                Container(
-                  width: fullWidth(context),
-                  height: fullHeight(context)/5.8,
-                  child: ListView.builder(
-                    padding: EdgeInsets.all(0),
-                    physics: BouncingScrollPhysics(),
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    itemCount: menuFood().length,
-                    itemBuilder: (context, index) =>
-                        foodPhotoWidget(menuFood()[index], context),
-                  ),
-                ), // Menu & Photos
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: smallSize(context)),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Subtitle2txt('Review & Ratings',color: Colors.grey.shade800,),
-                      Body2txt('See all (32)',color: Colors.grey,)
-                    ],
-                  ),
-                ),
-                SingleChildScrollView(
+              ),
+              Container(
+                width: fullWidth(context),
+                height: fullHeight(context) / 5.8,
+                child: ListView.builder(
+                  padding: EdgeInsets.all(0),
                   physics: BouncingScrollPhysics(),
-                  child: ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
-                    padding: EdgeInsets.all(0),
-                    shrinkWrap: true,
-                    itemBuilder: (context, index) =>
-                        ratingBoxWidget(ratingPeople()[index], context),
-                    itemCount: ratingPeople().length,
-                  ),
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: menuFood().length,
+                  itemBuilder: (context, index) =>
+                      foodPhotoWidget(menuFood()[index], context),
                 ),
-              ],
-            ),
+              ), // Menu & Photos
+              Container(
+                margin: EdgeInsets.symmetric(vertical: smallSize(context)),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Subtitle2txt(
+                      'Review & Ratings',
+                      color: Colors.grey.shade800,
+                    ),
+                    GestureDetector(
+                        onTap: () {},
+                        child: Body2txt(
+                          'See all (32)',
+                          color: Colors.grey,
+                        ))
+                  ],
+                ),
+              ),
+              SingleChildScrollView(
+                physics: BouncingScrollPhysics(),
+                child: ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  padding: EdgeInsets.all(0),
+                  shrinkWrap: true,
+                  itemBuilder: (context, index) =>
+                      ratingBoxWidget(ratingPeople()[index], context),
+                  itemCount: ratingPeople().length,
+                ),
+              ),
+            ],
           ),
+        ),
       ),
-            ])
-    );
+    ]));
   }
 }
