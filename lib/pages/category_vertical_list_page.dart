@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_course_shop_ui/pages/home_page.dart';
+import 'package:flutter_course_shop_ui/pages/main_page.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
 import 'package:flutter_course_shop_ui/widgets/category_vertical_widgets.dart';
@@ -25,14 +27,17 @@ class CategoryListPageState extends State<CategoryListPage2> {
           "Category",
           color: Color(0xff222455),
         ),
-        leading: Container(
-          margin: EdgeInsets.only(left: largeSize(context)),
-          child: SvgPicture.asset(
-            "assets/back ios.svg",
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back_ios_rounded,
+            color: Color(0xff222455),
           ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         centerTitle: true,
-          actions: [
+        actions: [
           Container(
             margin: EdgeInsets.only(right: largeSize(context)),
             child: SvgPicture.asset("assets/search icon.svg"),

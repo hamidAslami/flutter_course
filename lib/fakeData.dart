@@ -12,7 +12,7 @@ List foodList() {
   // اینجا هر چقدر لازم داشتین میتونین غذای فیک ادد کنید
 
   foods.add(Food(
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU',
+      'https://wallpaperaccess.com/full/767033.jpg',
       "Happy Bones",
       "394 Broome St, New York, NY 10013, USA",
       1.2,
@@ -21,7 +21,7 @@ List foodList() {
       4.5,
       "assets/friend3.jpg"));
   foods.add(Food(
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_3v02R_4Kh3DfU1iC1Ta0F0Vk3Ecc_O2n0A&usqp=CAU',
+      'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-seafood-grill-1-1100x733.jpg',
       "Uncle Boons",
       "7 Spring St, New York, NY 10012, USA",
       2.5,
@@ -30,7 +30,7 @@ List foodList() {
       4.3,
       "assets/friend3.jpg"));
   foods.add(Food(
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0fXqE-7EcbiLQlWhCSchbslx0T6jyPYcA9A&usqp=CAU',
+      'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-shrimp-lunch-1-1100x733.jpg',
       "Happy Bones",
       "394 Broome St, New York, NY 10013, USA",
       1.2,
@@ -39,7 +39,7 @@ List foodList() {
       4.2,
       "assets/friend3.jpg"));
   foods.add(Food(
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsYQhzCm91T20Z-_2TWSvR9OGn-zA7QIWW-w&usqp=CAU',
+      'https://isorepublic.com/wp-content/uploads/2018/11/margherita-1100x733.jpg',
       "Pizza",
       "394 Broome St, New York, NY 10013, USA",
       2.4,
@@ -48,7 +48,7 @@ List foodList() {
       4.4,
       "assets/friend3.jpg"));
   foods.add(Food(
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQabFqolj8H7WtcvIlSE02iUCJ1F7JCPJhD8g&usqp=CAU',
+      'https://isorepublic.com/wp-content/uploads/2018/11/isorepublic-steak-dinners-1-1100x733.jpg',
       "Beef",
       "394 Broome St, New York, NY 10013, USA",
       2,

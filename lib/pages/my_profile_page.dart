@@ -17,7 +17,9 @@ class MyProfilePageState extends State<MyProfilePage> {
       appBar: AppBar(
         brightness: Brightness.light,
         backgroundColor: Colors.grey.shade50,
-        leading: Icon(Icons.arrow_back_ios,color: Colors.black,),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back_ios_rounded,color: Colors.black,),
+        ),
         centerTitle: true,
         title: Subtitle2txt('Profile'),
       ),

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_course_shop_ui/pages/food_details_page.dart';
+import 'package:flutter_course_shop_ui/pages/my_favourite_food_page.dart';
 import 'package:flutter_course_shop_ui/pages/my_profile_page.dart';
+import 'package:flutter_course_shop_ui/pages/new_review_page.dart';
+import 'package:flutter_course_shop_ui/pages/notifications_page.dart';
 import 'package:flutter_course_shop_ui/pages/see_all_food_page.dart';
-import 'package:flutter_course_shop_ui/theme/dimens.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:line_icons/line_icons.dart';
 
 import 'home_page.dart';
@@ -20,14 +22,14 @@ class MainPageState extends State<MainPage> {
     switch (index) {
       case 0:
         return HomePage();
-      // case 1:
-      //   return YourPage();
-      // case 2:
-      //   return YourPage();
-      // case 3:
-      //   return YourPage();
+      case 1:
+        return MyFavouriteFoodPage();
+      case 2:
+        return NewReviewPage();
+      case 3:
+        return NotificationsPage();
       case 4:
-         return MyProfilePage();
+        return MyProfilePage();
       default:
         return HomePage();
     }
@@ -52,7 +54,8 @@ class MainPageState extends State<MainPage> {
         showUnselectedLabels: false,
         showSelectedLabels: false,
         items: [
-          BottomNavigationBarItem(title: Text('Home'), icon: Icon(LineIcons.home)),
+          BottomNavigationBarItem(
+              title: Text('Home'), icon: Icon(LineIcons.home)),
           BottomNavigationBarItem(
               title: Text('My Favorite'), icon: (Icon(LineIcons.bookmark))),
           BottomNavigationBarItem(
@@ -60,7 +63,6 @@ class MainPageState extends State<MainPage> {
           BottomNavigationBarItem(
               title: Text('Notification'),
               icon: Icon(Icons.notifications_none)),
-
           BottomNavigationBarItem(
               title: Text('My Profile'), icon: Icon((LineIcons.user))),
         ],

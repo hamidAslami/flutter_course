@@ -1,5 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_course_shop_ui/pages/category_vertical_list_page.dart';
+import 'package:flutter_course_shop_ui/pages/food_details_page.dart';
+import 'package:flutter_course_shop_ui/pages/new_review_page.dart';
 import 'package:flutter_course_shop_ui/pages/see_all_food_page.dart';
 import 'package:flutter_course_shop_ui/theme/dimens.dart';
 import 'package:flutter_course_shop_ui/theme/text_style.dart';
@@ -42,7 +45,7 @@ class HomePageState extends State<HomePage> {
                   children: [
                     Subtitle2txt("Trending Restaurants"),
                     GestureDetector(
-                      onTap: (){
+                      onTap: () {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
@@ -56,18 +59,24 @@ class HomePageState extends State<HomePage> {
                   ],
                 ),
               ), // title 1
-              Container(
-                height: fullHeight(context) / 2.2,
-                width: fullWidth(context),
-                child: ListView.builder(
-                  padding:
-                      EdgeInsets.symmetric(horizontal: mediumSize(context)),
-                  shrinkWrap: true,
-                  physics: BouncingScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  itemCount: foodList().length,
-                  itemBuilder: (context, index) =>
-                      foodCardWidget(foodList()[index], context),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FoodDetails()));
+                },
+                child: Container(
+                  height: fullHeight(context) / 2.2,
+                  width: fullWidth(context),
+                  child: ListView.builder(
+                    padding:
+                        EdgeInsets.symmetric(horizontal: mediumSize(context)),
+                    shrinkWrap: true,
+                    physics: BouncingScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: foodList().length,
+                    itemBuilder: (context, index) =>
+                        foodCardWidget(foodList()[index], context),
+                  ),
                 ),
               ), // food card
               Container(
@@ -79,9 +88,19 @@ class HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Subtitle2txt("Category"),
-                    Body2txt(
-                      "See all (9)",
-                      color: Color(0xffb8c0d5),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => CategoryListPage2(),
+                          ),
+                        );
+                      },
+                      child: Body2txt(
+                        "See all (9)",
+                        color: Color(0xffb8c0d5),
+                      ),
                     )
                   ],
                 ),
@@ -106,9 +125,11 @@ class HomePageState extends State<HomePage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Subtitle2txt("Friends"),
-                    Body2txt(
-                      "See all (56)",
-                      color: Color(0xffb8c0d5),
+                    GestureDetector(
+                      child: Body2txt(
+                        "See all (56)",
+                        color: Color(0xffb8c0d5),
+                      ),
                     )
                   ],
                 ),
